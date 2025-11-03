@@ -68,7 +68,10 @@ export default function SignupScreen({ navigation }) {
             Create your account to get started
           </Text>
 
-          <View style={styles.inputContainer}>
+          <View style={[styles.inputContainer, {
+            backgroundColor: theme.colors.surface,
+            borderColor: theme.colors.border,
+          }]}>
             <Ionicons name="person-outline" size={20} color={theme.colors.textSecondary} />
             <TextInput
               style={[styles.input, { color: theme.colors.text }]}
@@ -79,7 +82,10 @@ export default function SignupScreen({ navigation }) {
             />
           </View>
 
-          <View style={styles.inputContainer}>
+          <View style={[styles.inputContainer, {
+            backgroundColor: theme.colors.surface,
+            borderColor: theme.colors.border,
+          }]}>
             <Ionicons name="mail-outline" size={20} color={theme.colors.textSecondary} />
             <TextInput
               style={[styles.input, { color: theme.colors.text }]}
@@ -92,7 +98,10 @@ export default function SignupScreen({ navigation }) {
             />
           </View>
 
-          <View style={styles.inputContainer}>
+          <View style={[styles.inputContainer, {
+            backgroundColor: theme.colors.surface,
+            borderColor: theme.colors.border,
+          }]}>
             <Ionicons name="lock-closed-outline" size={20} color={theme.colors.textSecondary} />
             <TextInput
               style={[styles.input, { color: theme.colors.text }]}
@@ -111,7 +120,10 @@ export default function SignupScreen({ navigation }) {
             </TouchableOpacity>
           </View>
 
-          <View style={styles.inputContainer}>
+          <View style={[styles.inputContainer, {
+            backgroundColor: theme.colors.surface,
+            borderColor: theme.colors.border,
+          }]}>
             <Ionicons name="lock-closed-outline" size={20} color={theme.colors.textSecondary} />
             <TextInput
               style={[styles.input, { color: theme.colors.text }]}
@@ -196,12 +208,9 @@ const styles = StyleSheet.create({
   inputContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    borderWidth: 1,
-    borderColor: '#DEE2E6',
     borderRadius: 12,
     paddingHorizontal: 16,
     marginBottom: 16,
-    backgroundColor: '#F8F9FA',
   },
   input: {
     flex: 1,
