@@ -26,8 +26,8 @@ export const ThemeProvider = ({ children }) => {
 export const useTheme = () => useContext(ThemeContext);
 
 const lightColors = {
-  primary: '#FF6B9D',
-  secondary: '#C44569',
+  primary: '#7C3AED',
+  secondary: '#3B82F6',
   background: '#FFFFFF',
   surface: '#F8F9FA',
   card: '#FFFFFF',
@@ -40,11 +40,11 @@ const lightColors = {
 };
 
 const darkColors = {
-  primary: '#FF6B9D',
-  secondary: '#C44569',
-  background: '#121212',
-  surface: '#1E1E1E',
-  card: '#2C2C2C',
+  primary: '#8B5CF6',
+  secondary: '#3B82F6',
+  background: '#0F172A',
+  surface: '#1E293B',
+  card: '#1E293B',
   text: '#FFFFFF',
   textSecondary: '#B0B0B0',
   border: '#3A3A3A',
