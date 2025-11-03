@@ -9,6 +9,7 @@ import SearchScreen from '../screens/Main/SearchScreen';
 import AppointmentsScreen from '../screens/Main/AppointmentsScreen';
 import ProfileScreen from '../screens/Main/ProfileScreen';
 import SalonDetailScreen from '../screens/Main/SalonDetailScreen';
+import { Platform } from 'react-native';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -43,14 +44,14 @@ export default function MainNavigator() {
 
           return <Ionicons name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: theme.colors.primary,
+        tabBarActiveTintColor: 'white',
         tabBarInactiveTintColor: theme.colors.textSecondary,
         tabBarStyle: {
-          backgroundColor: theme.colors.card,
-          borderTopColor: theme.colors.border,
-          paddingBottom: 5,
+          backgroundColor: theme.colors.surface,
+          borderTopColor: theme.colors.surface,
+          paddingBottom: Platform.OS === 'ios' ? 20 : 5,
           paddingTop: 5,
-          height: 60,
+          height: Platform.OS === 'ios' ? 85 : 60,
         },
         tabBarLabelStyle: {
           fontSize: 12,
