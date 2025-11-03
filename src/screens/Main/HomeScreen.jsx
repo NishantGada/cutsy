@@ -29,7 +29,7 @@ export default function HomeScreen({ navigation }) {
   const featuredSalons = mockSalons.slice(0, 3);
 
   return (
-    <SafeAreaView style={[styles.container, { backgroundColor: theme.colors.background }]}>
+    <SafeAreaView style={[styles.container, { backgroundColor: theme.colors.background }]} edges={['top']}>
       <ScrollView showsVerticalScrollIndicator={false}>
         {/* Header */}
         <View style={styles.header}>
@@ -65,9 +65,11 @@ export default function HomeScreen({ navigation }) {
 
         {/* Categories */}
         <View style={styles.section}>
-          <Text style={[styles.sectionTitle, { color: theme.colors.text }]}>
-            Categories
-          </Text>
+          <View style={styles.sectionHeader}>
+            <Text style={[styles.sectionTitle, { color: theme.colors.text }]}>
+              Categories
+            </Text>
+          </View>
           <ScrollView
             horizontal
             showsHorizontalScrollIndicator={false}
@@ -205,8 +207,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 20,
     fontWeight: 'bold',
-    paddingHorizontal: 20,
-    marginBottom: 16,
+    marginBottom: 0,  // Remove bottom margin when inside sectionHeader
   },
   seeAll: {
     fontSize: 14,
